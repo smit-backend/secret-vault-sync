@@ -1,0 +1,28 @@
+{
+    "name": "smit-backend/secret-vault-sync",
+    "description": "Zero-dependency background synchronization client pulling environment variables and cryptographic keys from HashiCorp Vault into runtime memory.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "smit-backend",
+            "email": "sync2sale@gmail.com",
+            "homepage": "https://github.com/smit-backend"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "SmitBackend\\VaultSync\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SmitBackend\\VaultSync\\PackageServiceProvider"
+            ]
+        }
+    }
+}
